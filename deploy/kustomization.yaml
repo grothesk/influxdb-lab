@@ -1,0 +1,14 @@
+namespace: influxdb-lab
+
+resources:
+  - resources/namespace.yaml
+
+helmGlobals:
+  chartHome: charts
+  
+helmCharts:
+  - name: influxdb
+    releaseName: influxdb-lab
+    repo: https://charts.bitnami.com/bitnami
+    version: 5.9.11
+    valuesFile: values.yaml
